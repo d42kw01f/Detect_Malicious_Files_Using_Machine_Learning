@@ -67,7 +67,7 @@ view(MLDATASET.cleaned)
 write.csv(MLDATASET.cleaned, "C:\\Users\\pdaks\\OneDrive\\Documents\\Education\\ECU\\Data_Analysis_and_Visualization\\Assignments\\Assignment_2\\Final\\MLDATASET.cleaned.csv")
 
 #Set a seed that way createDataPartition can randomly generate a data set
-set.seed(10519381)
+set.seed(20313)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 TrainRowNum <- createDataPartition(MLDATASET.cleaned$Actually.Malicious, 
@@ -96,7 +96,7 @@ library(tidyverse)
 library(glmnet)
 library(caret)
 
-set.seed(10519381)
+set.seed(20313)
 models.list1 <- c("Logistic Ridge Regression",
                   "Logistic LASSO Regression",
                   "Logistic Elastic-Net Regression")
