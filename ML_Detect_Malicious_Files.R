@@ -5,7 +5,7 @@ library(tidyverse)
 library(caret)
 
 #Read the MLDATASET_PartiallyCleaned.csv and store output in variable called dat.
-dat <- read.csv("C:\\Users\\pdaks\\OneDrive\\Documents\\Education\\ECU\\Data_Analysis_and_Visualization\\Assignments\\Assignment_2\\MLDATASET_PartiallyCleaned.csv",
+dat <- read.csv("MLDATASET_PartiallyCleaned.csv",
                 na.strings="", stringsAsFactors=TRUE)
 
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -64,7 +64,7 @@ any(is.na(MLDATASET.cleaned))
 #View the Clean data set
 view(MLDATASET.cleaned)
 #Write that data set into a csv file
-write.csv(MLDATASET.cleaned, "C:\\Users\\pdaks\\OneDrive\\Documents\\Education\\ECU\\Data_Analysis_and_Visualization\\Assignments\\Assignment_2\\Final\\MLDATASET.cleaned.csv")
+write.csv(MLDATASET.cleaned, "MLDATASET.cleaned.csv")
 
 #Set a seed that way createDataPartition can randomly generate a data set
 set.seed(20313)
@@ -77,10 +77,10 @@ TrainRowNum <- createDataPartition(MLDATASET.cleaned$Actually.Malicious,
                                    list=FALSE);
 #Get the training data set
 TrainData <- MLDATASET.cleaned[TrainRowNum,]
-write.csv(TrainData, "C:\\Users\\pdaks\\OneDrive\\Documents\\Education\\ECU\\Data_Analysis_and_Visualization\\Assignments\\Assignment_2\\Final\\Train.csv")
+write.csv(TrainData, "Train.csv")
 #Get the testing data set
 TestData <- MLDATASET.cleaned[-TrainRowNum,]
-write.csv(TrainData, "C:\\Users\\pdaks\\OneDrive\\Documents\\Education\\ECU\\Data_Analysis_and_Visualization\\Assignments\\Assignment_2\\Final\\Test.csv")
+write.csv(TrainData, "Test.csv")
 #check the percentage of the Training data set from full data set.
 nrow(TrainData) * 100 / nrow(MLDATASET.cleaned)
 
@@ -341,7 +341,7 @@ for (I in 1:nrow(Random.Forest.grid))
 }
 
 #Write the grid dataframe
-andom.Forest.grid <- write.csv( "C:\\Users\\pdaks\\OneDrive\\Documents\\Education\\ECU\\Data_Analysis_and_Visualization\\Assignments\\Assignment_2\\Final\\RFOutput.csv")
+andom.Forest.grid <- write.csv( "RFOutput.csv")
 
 #check the top 5 results of Random.Forest.grid
 Random.Forest.grid[order(Random.Forest.grid$OOB.Err,decreasing=FALSE)[1:5],]
