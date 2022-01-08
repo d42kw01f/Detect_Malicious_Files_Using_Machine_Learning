@@ -12,7 +12,7 @@ Use machine learning algorithms to identify the internet's malicious content.
 
 ---
 
-> I know that many students who do Data Visualization use this assignment as a sample assignment. If you have any issues about this, feel free to reach me at [ Discord d42kw01f#8722](https://discord.com/). I am very much happy to help you all. And I am still learning I hope I would be a learning curve for myself too.
+> I know that many students who do Data Visualization use this assignment as a sample assignment. If you have any issues about this, feel free to reach me at Discord [d42kw01f#8722](https://discord.com/). I am very much happy to help you all. And I am still learning I hope I would be a learning curve for myself too.
 >         
 > Thank You :wink:.
 
